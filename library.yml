@@ -1,15 +1,13 @@
 ---
-title: AI Library Component Python Template
-command: python3 main.py
-description: " -  Intel Bert Question Answer Demo."
+title: Slack
+command: python3 slack.py
+description: "Send a custom message to a slack channel using incoming webhooks."
 version: 1.0.0
 docker_images: cnvrg
 compute: small
-data_type: ipynb
-icon: tensorflow
+icon: python
 
 arguments:
-  sometxt:
-    value: 'sometxt.txt'
+  message:
+    value: 'my message'
     type: categorical
-

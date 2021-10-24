@@ -15,10 +15,11 @@ send a custom message to a slack channel using incoming webhook
 
 ## Running
 
-You'll need to define the slack incoming webhook URL as a secret in your cnvrg project:
+Define the slack incoming webhook URL as a secret in your cnvrg project:
 ```
-SLACK_WEBHOOK_URL=blabla
+SLACK_WEBHOOK_URL
 ```
+
 Running the application with the `-h` option yields the following usage message:
 ```
 python3 main.py -h
