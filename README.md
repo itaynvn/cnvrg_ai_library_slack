@@ -1,37 +1,32 @@
 
-#  cnvrg AI Library: Slack integration
+#  Slack channel integration
 
-send a custom message to a slack channel using incoming webhook
+send a custom message to a slack channel using incoming webhook slack app.
 
 ## How It Works
 
-1. create a slack app: [](https://api.slack.com/apps)[https://api.slack.com/apps](https://api.slack.com/apps)
-
-2. activate incoming webhooks
-
-3. install to workspace & choose channel to post to
-
-4. copy webhook URL
+Using Slack's built-in incoming webhook capabilities to send a message:
+https://slack.dev/python-slack-sdk/webhook/index.html
 
 ## Running
 
-Define the slack incoming webhook URL as a secret in your cnvrg project:
+1. Create a dedicated slack app: [](https://api.slack.com/apps)[https://api.slack.com/apps](https://api.slack.com/apps)
+
+2. Install to workspace & choose the target slack channel.
+
+3. Activate incoming webhooks & copy webhook URL
+
+4. Define the slack incoming webhook URL as a secret in your cnvrg project:
 ```
 SLACK_WEBHOOK_URL
 ```
 
-Running the application with the `-h` option yields the following usage message:
-```
-python3 main.py -h
-```
-The command yields the following usage message:
-```
-usage: main.py [-h]  --sometxt SOMETXT
-                                       [--sometxt SOMETXT]
+5. Choose the Slack AI Library component, and pass the text you'd wish to send, to "message" argument.
                                      
 
 Options:
   -h, --help            Show this help message and exit.
+  -m, --message         The content of the message you'd like to send
  
 ```
 
@@ -48,7 +43,6 @@ You can use the following command to try the demo
 [LINKS](../../../tools/README.md) ):
 ```
     python3 main.py
-            --sometxt=file.txt
           
 ```
 The demo will use a....

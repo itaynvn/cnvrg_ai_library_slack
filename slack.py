@@ -3,10 +3,21 @@ from slack_sdk.webhook import WebhookClient
 import os
 
 def slack(webhook_url,message):
+    job_url = os.getenv("CNVRG_JOB_URL")
+    job_name = os.getenv("CNVRG_JOB_NAME")
     webhook = WebhookClient(webhook_url)
-    response = webhook.send(text=message)
-    assert response.status_code == 200
-    assert response.body == "ok"
+    response = webhook.send(
+    text="fallback",
+    blocks=[
+        {
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": f"*:small_blue_diamond:<{job_url}|Sent from cnvrg.io job: {job_name}>:small_blue_diamond:*\n{message}"
+                }
+         }
+        ]
+    )
     
 #TODO --- ADD your imports Classes and methods
 
