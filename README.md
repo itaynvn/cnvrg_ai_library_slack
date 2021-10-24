@@ -10,7 +10,7 @@ https://slack.dev/python-slack-sdk/webhook/index.html
 
 ## Running
 
-#### In Slack:
+**In Slack:**
 
 1. Go here to create a [new slack app](https://api.slack.com/apps). 
 Select **Create New App** -> **From Scratch**.
@@ -21,12 +21,12 @@ From app page, select **Settings** -> **Install App**
 
 3. Copy the **webhook URL** from the bottom of the page.
 
-#### In cnvrg:
+**In cnvrg:**
 
-4. Define a new secret:
-In your project, go to **Settings** -> **Secrets** -> **Add**. Set the secret's name to be ```SLACK_WEBHOOK_URL```, and the value to be the URL.
+4. Define a new secret in your cnvrg project:
+Go to **Settings** -> **Secrets** -> **Add**. Set the secret's name to be ```SLACK_WEBHOOK_URL```, and the value to be the URL.
 
-5. Choose the Slack AI Library component, and pass the text you'd wish to send, to "message" argument.
+5. Choose the Slack AI Library component, and pass the text you'd wish to send, to the **message** argument.
                                      
 ## Demo Inputs
 
@@ -51,16 +51,10 @@ Send the value of a previous task's tag (read more about flow tags [here](https:
 ```
 
 ## Example Demo from command line:
-You can use the following command to try the demo
-[LINKS](../../../tools/README.md) ):
+You can use the following command to try the demo:
 ```
-    python3 slack.py --message "my bonnie is over the ocean, my bonnie is over the sea"
-          
+python3 slack.py --message "my bonnie is over the ocean, my bonnie is over the sea"        
 ```
 
 ## Customizing the Slack app appearance
 You can customize the "bot user" that will send the messages in your webhook app, by visiting the Slack app page and going to **Settings** -> **Basic Information** -> then scroll to bottom for **Display Information**
-
-
-## See Also
-* [LINKS](../../README.md)
