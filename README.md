@@ -1,13 +1,24 @@
-#  cnvrg AI Library Python Component Template
 
-This README describes the ... TEMPLATE ...
+#  cnvrg AI Library: Slack integration
+
+send a custom message to a slack channel using incoming webhook
 
 ## How It Works
 
-Upon the start-up the demo application 
+1. create a slack app: [](https://api.slack.com/apps)[https://api.slack.com/apps](https://api.slack.com/apps)
+
+2. activate incoming webhooks
+
+3. install to workspace & choose channel to post to
+
+4. copy webhook URL
 
 ## Running
 
+You'll need to define the slack incoming webhook URL as a secret in your cnvrg project:
+```
+SLACK_WEBHOOK_URL=blabla
+```
 Running the application with the `-h` option yields the following usage message:
 ```
 python3 main.py -h
@@ -20,8 +31,6 @@ usage: main.py [-h]  --sometxt SOMETXT
 
 Options:
   -h, --help            Show this help message and exit.
-  -v VOCAB, --vocab VOCAB
-                        Required. path to the vocabulary file with tokens
  
 ```
 
