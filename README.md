@@ -1,7 +1,7 @@
 
-#  Slack channel integration
+#  Send a custom message to a Slack channel
 
-send a custom message to a slack channel using incoming webhook slack app.
+A component that levrages Slack's incoming webhook app to send a custom message to a slack channel.
 
 ## How It Works
 
