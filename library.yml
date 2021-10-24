@@ -2,12 +2,12 @@
 title: Slack
 command: python3 slack.py
 description: "Send a custom message to a slack channel using incoming webhooks."
-version: 0.8.7
+version: 0.8.8
 docker_images: cnvrg
 compute: small
 icon: python
 
 arguments:
   message:
-    value: 'my message'
+    value: "my message"
     type: categorical
